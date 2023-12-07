@@ -9,7 +9,7 @@ class ThingForm(forms.ModelForm):
         model = Thing
         fields = ['name', 'description', 'quantity']
 
-    description = forms.CharField(widget=forms.Textarea)
+    description = forms.Textarea()
     quantity = forms.IntegerField(widget=forms.NumberInput)
 
     def clean_quantity(self):
